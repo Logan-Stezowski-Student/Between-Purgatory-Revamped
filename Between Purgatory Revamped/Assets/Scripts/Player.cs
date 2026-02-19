@@ -10,7 +10,17 @@ public class Player : MonoBehaviour
 
     private bool canDoubleJump;
     private bool isGrounded;
+    private bool jumpRelease;
 
+    public int interactingRange;
+
+    public int damage = 5;
+    public EnemyHealth current;
+    public BossHealth current2;
+
+    private float groundDisableTime = 0.1f;
+    private float groundDisableCount = 0;
+    WeaponSwitch weaponSwitch;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +28,18 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+
+    private void Update()
+    {
+        Move();
+        Jump();
+
+        if (groundDisableCount > 0) 
+        {
+            groundDisableCount -= Time.deltaTime;
+        }
+    }
+    public void Move()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
@@ -28,34 +49,62 @@ public class Player : MonoBehaviour
 
         Vector3 newVelocity = new Vector3(move.x, rigidBody.velocity.y, move.z);
         rigidBody.velocity = newVelocity;
-
-        if (Input.GetKeyDown(KeyCode.Space))
+    }
+    public void Jump()
+    { 
+        if (Input.GetKeyDown(KeyCode.Space) && jumpRelease)
         {
             if (isGrounded) 
             {
-                rigidBody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-                canDoubleJump = true;
-                isGrounded = false;
+                FirstJump();
             }
             else if (canDoubleJump) 
             {
-                rigidBody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-                canDoubleJump = false;
+                SecondJump();
             }
         }
-    }
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Ground")) 
+        if (Input.GetKeyUp(KeyCode.Space)) 
         {
+            jumpRelease = true;
+        }
+
+    }
+    void FirstJump() 
+    {
+        rigidBody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        canDoubleJump = true;
+        isGrounded = false;
+    }
+    void SecondJump() 
+    {
+        rigidBody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        canDoubleJump = false;
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground") && groundDisableCount <= 0) 
+        { 
             isGrounded = true;
         }
     }
-    void OnCollisionExit(Collision collision)
+    
+    void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Ground")) 
+        if (other.gameObject.CompareTag("Enemy"))
         {
-            isGrounded = false;
+            current = other.gameObject.GetComponent<EnemyHealth>();
+        }
+        if (other.gameObject.CompareTag("Boss"))
+        {
+            current2 = other.gameObject.GetComponent<BossHealth>();
+        }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            current = null;
         }
     }
 }

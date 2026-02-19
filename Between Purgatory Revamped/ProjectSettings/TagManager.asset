@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Enemy
+  - Wall
+  - Switch
+  - Pickup
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -12,10 +17,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - whatIsGround
+  - whatIsPlayer
+  - Enemy
+  - whatIsWall
   - 
   - 
   - 

@@ -4,5 +4,38 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: d709867e1f6a3054b81bf5268073db21
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 83e19da37d19fc54eb92d9a90aa17f51
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: fc912ff6035f5c24689c4a9a5d357147
+  - enabled: 1
+    path: Assets/Scenes/Level 3.unity
+    guid: 744821e9a775459428b219790b1b4632
+  - enabled: 1
+    path: Assets/Scenes/Level 4.unity
+    guid: fc97ac7d90d0d3045924f605f76807f5
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: c4832e4c1f1b3074f9477e4fd3050a0a
+  - enabled: 1
+    path: Assets/Scenes/Intermission Tutorial.unity
+    guid: e23a0ae44a46ff249a634aeeb82dd95c
+  - enabled: 1
+    path: Assets/Scenes/Intermission 1.unity
+    guid: e9efb04cf193f394d84adc6fd303eb44
+  - enabled: 1
+    path: Assets/Scenes/Intermission 2.unity
+    guid: 23aaa52b92393de4faf962fbb653b59c
+  - enabled: 1
+    path: Assets/Scenes/Intermission 3.unity
+    guid: 2360170dfb7de5b4a91b7697a4236b2d
   m_configObjects: {}
