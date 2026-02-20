@@ -483,55 +483,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 17202807}
   m_CullTransparentMesh: 1
---- !u!1 &17646139
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 17646141}
-  - component: {fileID: 17646140}
-  m_Layer: 0
-  m_Name: PickupSpawner (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &17646140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 17646139}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 647dd2f290905384d9d227d8f1a82993, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickUpPrefab: {fileID: 3829349184560266737, guid: a2ae598ca90ca5849889a6c5a86609f9, type: 3}
-  spawnerPostition: {fileID: 17646141}
-  spawnRate: 15
-  healthSpawnAmount: 0
-  orbSpawnAmount: 1
-  cannonSpawnAmount: 0
---- !u!4 &17646141
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 17646139}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -200, y: 1, z: -49}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 500353792}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &19717045 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1744675750264017236, guid: e02d956a3ef5e8442b7dffa53b9e94eb, type: 3}
@@ -547,55 +498,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7803280486129524942, guid: e02d956a3ef5e8442b7dffa53b9e94eb, type: 3}
   m_PrefabInstance: {fileID: 1839442567}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &22756122
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 22756124}
-  - component: {fileID: 22756123}
-  m_Layer: 0
-  m_Name: PickupSpawner (7)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &22756123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 22756122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 647dd2f290905384d9d227d8f1a82993, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickUpPrefab: {fileID: 3829349184560266737, guid: a2ae598ca90ca5849889a6c5a86609f9, type: 3}
-  spawnerPostition: {fileID: 22756124}
-  spawnRate: 15
-  healthSpawnAmount: 0
-  orbSpawnAmount: 1
-  cannonSpawnAmount: 0
---- !u!4 &22756124
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 22756122}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -160, y: 1, z: -49}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 500353792}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &25615323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1300,10 +1202,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickUpPrefab: {fileID: 3829349184560266737, guid: a2ae598ca90ca5849889a6c5a86609f9, type: 3}
   spawnerPostition: {fileID: 53759001}
-  spawnRate: 15
+  spawnRate: 7
   healthSpawnAmount: 0
   orbSpawnAmount: 1
   cannonSpawnAmount: 0
+  isHealthSpawn: 0
+  isOrbSpawn: 1
+  isCannonSpawn: 0
 --- !u!4 &53759001
 Transform:
   m_ObjectHideFlags: 0
@@ -1312,7 +1217,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 53758999}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -160, y: 1, z: 10}
+  m_LocalPosition: {x: -179, y: 1, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 500353792}
@@ -8057,12 +7962,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 319685442}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 10, z: 18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_Father: {fileID: 1482424625}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &319985244
 GameObject:
@@ -8567,7 +8472,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f43165308c2019640a65bf5fc29e8645, type: 2}
+  - {fileID: 2100000, guid: d690ce46b58f6704caed1ffbff694459, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9832,55 +9737,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3143677046212908509, guid: e02d956a3ef5e8442b7dffa53b9e94eb, type: 3}
   m_PrefabInstance: {fileID: 851659698}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &386861118
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 386861120}
-  - component: {fileID: 386861119}
-  m_Layer: 0
-  m_Name: PickupSpawner (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &386861119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 386861118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 647dd2f290905384d9d227d8f1a82993, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickUpPrefab: {fileID: 1325124019409140956, guid: f15a6e2ed1ec0b24b855368d935bc2fe, type: 3}
-  spawnerPostition: {fileID: 386861120}
-  spawnRate: 15
-  healthSpawnAmount: 0
-  orbSpawnAmount: 0
-  cannonSpawnAmount: 1
---- !u!4 &386861120
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 386861118}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -150, y: 1, z: -40}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 500353792}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &389769714 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5638560879889736902, guid: e02d956a3ef5e8442b7dffa53b9e94eb, type: 3}
@@ -10352,7 +10208,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8afbb2f9735ae3143b3986004f254dc5, type: 2}
+  - {fileID: 2100000, guid: b16f5f73b368f724ba4fece54476c275, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10408,7 +10264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12e8d9a60bbf02b4f88d1c40636b7e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1000
+  health: 800
   bossName: {fileID: 906364496}
   healthText: {fileID: 1536522006}
   isAlive: 1
@@ -12168,12 +12024,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 488847440}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -31, y: 10, z: 11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_Father: {fileID: 1482424625}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &490359835 stripped
 Transform:
@@ -12348,12 +12204,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 497781096}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_Father: {fileID: 1482424625}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &500353791
 GameObject:
@@ -12384,12 +12240,6 @@ Transform:
   m_Children:
   - {fileID: 53759001}
   - {fileID: 1808259952}
-  - {fileID: 386861120}
-  - {fileID: 1077061846}
-  - {fileID: 1135317547}
-  - {fileID: 1578357958}
-  - {fileID: 17646141}
-  - {fileID: 22756124}
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13015,7 +12865,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f43165308c2019640a65bf5fc29e8645, type: 2}
+  - {fileID: 2100000, guid: d690ce46b58f6704caed1ffbff694459, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17409,7 +17259,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f43165308c2019640a65bf5fc29e8645, type: 2}
+  - {fileID: 2100000, guid: d690ce46b58f6704caed1ffbff694459, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22690,7 +22540,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f43165308c2019640a65bf5fc29e8645, type: 2}
+  - {fileID: 2100000, guid: d690ce46b58f6704caed1ffbff694459, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26264,7 +26114,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f43165308c2019640a65bf5fc29e8645, type: 2}
+  - {fileID: 2100000, guid: d690ce46b58f6704caed1ffbff694459, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26778,55 +26628,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e02d956a3ef5e8442b7dffa53b9e94eb, type: 3}
---- !u!1 &1077061844
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1077061846}
-  - component: {fileID: 1077061845}
-  m_Layer: 0
-  m_Name: PickupSpawner (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1077061845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1077061844}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 647dd2f290905384d9d227d8f1a82993, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickUpPrefab: {fileID: 1325124019409140956, guid: f15a6e2ed1ec0b24b855368d935bc2fe, type: 3}
-  spawnerPostition: {fileID: 1077061846}
-  spawnRate: 15
-  healthSpawnAmount: 0
-  orbSpawnAmount: 0
-  cannonSpawnAmount: 1
---- !u!4 &1077061846
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1077061844}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -210, y: 1, z: -40}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 500353792}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1077135536
 GameObject:
   m_ObjectHideFlags: 0
@@ -27160,12 +26961,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1086383558}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -112, y: 9, z: -9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_Father: {fileID: 1482424625}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1088940171 stripped
 Transform:
@@ -27807,55 +27608,6 @@ Transform:
   - {fileID: 2090400458}
   m_Father: {fileID: 0}
   m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1104946713
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1104946715}
-  - component: {fileID: 1104946714}
-  m_Layer: 0
-  m_Name: PickupSpawner (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1104946714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1104946713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 647dd2f290905384d9d227d8f1a82993, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickUpPrefab: {fileID: 8019315020598475228, guid: e77a507afa485c447a35c07894e54e05, type: 3}
-  spawnerPostition: {fileID: 1104946715}
-  spawnRate: 15
-  healthSpawnAmount: 1
-  orbSpawnAmount: 0
-  cannonSpawnAmount: 0
---- !u!4 &1104946715
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1104946713}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -210, y: 1, z: -50}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1215493908}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1107050252
 GameObject:
@@ -28740,55 +28492,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ee822fd86147464889374c594d6b34d, type: 3}
---- !u!1 &1135317545
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1135317547}
-  - component: {fileID: 1135317546}
-  m_Layer: 0
-  m_Name: PickupSpawner (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1135317546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1135317545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 647dd2f290905384d9d227d8f1a82993, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickUpPrefab: {fileID: 1325124019409140956, guid: f15a6e2ed1ec0b24b855368d935bc2fe, type: 3}
-  spawnerPostition: {fileID: 1135317547}
-  spawnRate: 15
-  healthSpawnAmount: 0
-  orbSpawnAmount: 0
-  cannonSpawnAmount: 1
---- !u!4 &1135317547
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1135317545}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -210, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 500353792}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1139133574 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1792557741258504191, guid: e02d956a3ef5e8442b7dffa53b9e94eb, type: 3}
@@ -28880,12 +28583,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139650010}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -69, y: 10, z: 30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_Father: {fileID: 1482424625}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1140068283
 GameObject:
@@ -30336,9 +30039,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2119346053}
-  - {fileID: 1994167051}
-  - {fileID: 1104946715}
-  - {fileID: 1706195319}
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31722,7 +31422,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f43165308c2019640a65bf5fc29e8645, type: 2}
+  - {fileID: 2100000, guid: d690ce46b58f6704caed1ffbff694459, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35476,12 +35176,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1455899312}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -114, y: 10, z: 38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_Father: {fileID: 1482424625}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1456119656 stripped
 Transform:
@@ -35802,6 +35502,14 @@ Transform:
   - {fileID: 1711222043}
   - {fileID: 770488233}
   - {fileID: 1983999445}
+  - {fileID: 497781098}
+  - {fileID: 319685444}
+  - {fileID: 488847442}
+  - {fileID: 1549053252}
+  - {fileID: 1086383560}
+  - {fileID: 1501470931}
+  - {fileID: 1139650012}
+  - {fileID: 1455899314}
   m_Father: {fileID: 0}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -36056,12 +35764,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1501470929}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -26, y: 10, z: -36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_Father: {fileID: 1482424625}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1501966684 stripped
 Transform:
@@ -36653,7 +36361,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f43165308c2019640a65bf5fc29e8645, type: 2}
+  - {fileID: 2100000, guid: d690ce46b58f6704caed1ffbff694459, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37466,12 +37174,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1549053250}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -70, y: 10, z: -9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_Father: {fileID: 1482424625}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1549593520 stripped
 Transform:
@@ -38416,55 +38124,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8071517074090020048, guid: e02d956a3ef5e8442b7dffa53b9e94eb, type: 3}
   m_PrefabInstance: {fileID: 1241504177}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1578357956
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1578357958}
-  - component: {fileID: 1578357957}
-  m_Layer: 0
-  m_Name: PickupSpawner (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1578357957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1578357956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 647dd2f290905384d9d227d8f1a82993, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickUpPrefab: {fileID: 3829349184560266737, guid: a2ae598ca90ca5849889a6c5a86609f9, type: 3}
-  spawnerPostition: {fileID: 1578357958}
-  spawnRate: 15
-  healthSpawnAmount: 0
-  orbSpawnAmount: 1
-  cannonSpawnAmount: 0
---- !u!4 &1578357958
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1578357956}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -200, y: 1, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 500353792}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1578785501
 GameObject:
   m_ObjectHideFlags: 0
@@ -40738,55 +40397,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1706042496}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1706195317
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1706195319}
-  - component: {fileID: 1706195318}
-  m_Layer: 0
-  m_Name: PickupSpawner (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1706195318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1706195317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 647dd2f290905384d9d227d8f1a82993, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickUpPrefab: {fileID: 8019315020598475228, guid: e77a507afa485c447a35c07894e54e05, type: 3}
-  spawnerPostition: {fileID: 1706195319}
-  spawnRate: 15
-  healthSpawnAmount: 1
-  orbSpawnAmount: 0
-  cannonSpawnAmount: 0
---- !u!4 &1706195319
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1706195317}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -210, y: 1, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1215493908}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1708163081 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3143677046212908509, guid: e02d956a3ef5e8442b7dffa53b9e94eb, type: 3}
@@ -43332,10 +42942,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickUpPrefab: {fileID: 1325124019409140956, guid: f15a6e2ed1ec0b24b855368d935bc2fe, type: 3}
   spawnerPostition: {fileID: 1808259952}
-  spawnRate: 15
+  spawnRate: 7
   healthSpawnAmount: 0
   orbSpawnAmount: 0
   cannonSpawnAmount: 1
+  isHealthSpawn: 0
+  isOrbSpawn: 0
+  isCannonSpawn: 1
 --- !u!4 &1808259952
 Transform:
   m_ObjectHideFlags: 0
@@ -43344,7 +42957,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1808259950}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -150, y: 1, z: 0}
+  m_LocalPosition: {x: -180, y: 1, z: -50}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 500353792}
@@ -46064,7 +45677,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f43165308c2019640a65bf5fc29e8645, type: 2}
+  - {fileID: 2100000, guid: d690ce46b58f6704caed1ffbff694459, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -48256,7 +47869,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f43165308c2019640a65bf5fc29e8645, type: 2}
+  - {fileID: 2100000, guid: d690ce46b58f6704caed1ffbff694459, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -48291,55 +47904,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7465747730428124948, guid: e02d956a3ef5e8442b7dffa53b9e94eb, type: 3}
   m_PrefabInstance: {fileID: 1590447278}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1994167049
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1994167051}
-  - component: {fileID: 1994167050}
-  m_Layer: 0
-  m_Name: PickupSpawner (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1994167050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1994167049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 647dd2f290905384d9d227d8f1a82993, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickUpPrefab: {fileID: 8019315020598475228, guid: e77a507afa485c447a35c07894e54e05, type: 3}
-  spawnerPostition: {fileID: 1994167051}
-  spawnRate: 15
-  healthSpawnAmount: 1
-  orbSpawnAmount: 0
-  cannonSpawnAmount: 0
---- !u!4 &1994167051
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1994167049}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -150, y: 1, z: -50}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1215493908}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1997940271 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 866280670148540691, guid: e02d956a3ef5e8442b7dffa53b9e94eb, type: 3}
@@ -49247,7 +48811,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f43165308c2019640a65bf5fc29e8645, type: 2}
+  - {fileID: 2100000, guid: d690ce46b58f6704caed1ffbff694459, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -49385,7 +48949,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f43165308c2019640a65bf5fc29e8645, type: 2}
+  - {fileID: 2100000, guid: d690ce46b58f6704caed1ffbff694459, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -51075,10 +50639,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickUpPrefab: {fileID: 8019315020598475228, guid: e77a507afa485c447a35c07894e54e05, type: 3}
   spawnerPostition: {fileID: 2119346053}
-  spawnRate: 15
+  spawnRate: 7
   healthSpawnAmount: 1
   orbSpawnAmount: 0
   cannonSpawnAmount: 0
+  isHealthSpawn: 1
+  isOrbSpawn: 0
+  isCannonSpawn: 0
 --- !u!4 &2119346053
 Transform:
   m_ObjectHideFlags: 0
@@ -51087,7 +50654,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2119346051}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -150, y: 1, z: 10}
+  m_LocalPosition: {x: -209, y: 1, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1215493908}

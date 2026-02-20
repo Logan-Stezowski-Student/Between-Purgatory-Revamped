@@ -12,9 +12,9 @@ public class PickupSpawner : MonoBehaviour
     public float orbSpawnAmount;
     public float cannonSpawnAmount;
 
-    //public bool isHealthSpawn;
-    //public bool isOrbSpawn;
-    //public bool isCannonSpawn;
+    public bool isHealthSpawn;
+    public bool isOrbSpawn;
+    public bool isCannonSpawn;
     // Start is called before the first frame update
     private void Start()
     {
@@ -26,29 +26,29 @@ public class PickupSpawner : MonoBehaviour
     {
         spawnTimer -= Time.deltaTime;
 
-        if (spawnTimer < 0.0f && healthSpawnAmount == 1) //&& isHealthSpawn) 
+        if (spawnTimer < 0.0f) 
         {
-            Instantiate(pickUpPrefab, spawnerPostition);
-
+            if (healthSpawnAmount == 1 && isHealthSpawn)
+            {
+                SpawnPickup();
+                healthSpawnAmount--;
+            }
+            else if (orbSpawnAmount == 1 && isOrbSpawn)
+            {
+                SpawnPickup();
+                orbSpawnAmount--;
+            }
+            else if (cannonSpawnAmount == 1 && isCannonSpawn)
+            {
+                SpawnPickup();
+                cannonSpawnAmount--;
+            }
             spawnTimer = spawnRate;
-
-            healthSpawnAmount--;
         }
-        if (spawnTimer < 0.0f && orbSpawnAmount == 1) //&& isOrbSpawn)
-        {
-            Instantiate(pickUpPrefab, spawnerPostition);
+    }
 
-            spawnTimer = spawnRate;
-
-            orbSpawnAmount--;
-        }
-        if (spawnTimer < 0.0f && cannonSpawnAmount == 1) //&& isCannonSpawn)
-        {
-            Instantiate(pickUpPrefab, spawnerPostition);
-
-            spawnTimer = spawnRate;
-
-            cannonSpawnAmount--;
-        }
+    void SpawnPickup() 
+    {
+        Instantiate(pickUpPrefab, spawnerPostition);
     }
 }
