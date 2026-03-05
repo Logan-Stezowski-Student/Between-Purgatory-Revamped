@@ -10,6 +10,9 @@ TagManager:
   - Switch
   - Pickup
   - Boss
+  - Weapon
+  - UI to be Destroyed
+  - LoreSystem
   layers:
   - Default
   - TransparentFX

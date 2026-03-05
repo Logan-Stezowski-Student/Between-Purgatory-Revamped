@@ -16,6 +16,9 @@ public class BossHealth : MonoBehaviour
     public bool isAlive = true;
 
     public GameObject bossMusic;
+    public GameObject enemySpawners;
+    public GameObject healthSpawners;
+    public GameObject ammoSpawners;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,7 +46,25 @@ public class BossHealth : MonoBehaviour
     }
     public void BossDeath() 
     {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        GameObject[] weapons = GameObject.FindGameObjectsWithTag("Weapon");
+        GameObject[] ui = GameObject.FindGameObjectsWithTag("UI to be Destroyed");
+        foreach (GameObject enemy in enemies) 
+        {
+            Destroy(enemy);
+        }
+        foreach (GameObject weapon in weapons) 
+        {
+            Destroy(weapon);    
+        }
+        foreach(GameObject text in ui) 
+        {
+            Destroy(text);
+        }
         bossMusic.SetActive(false);
+        enemySpawners.SetActive(false);
+        healthSpawners.SetActive(false);
+        ammoSpawners.SetActive(false);
         Destroy(gameObject);
     }
     public void UpdateBossHealth() 

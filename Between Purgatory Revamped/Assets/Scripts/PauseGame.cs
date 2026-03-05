@@ -10,7 +10,8 @@ public class PauseGame : MonoBehaviour
     public bool isPaused;
     public FirstPersonCamera firstPersonCamera;
     public InputHandler inputHandler;
-    BossHealth health;
+    public GameObject bossHealth;
+    public GameObject bossName;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +42,8 @@ public class PauseGame : MonoBehaviour
     public void Pause() 
     {
         pauseUI.SetActive(true);
+        bossHealth.SetActive(false);
+        bossName.SetActive(false);
         Time.timeScale = 0f;
         AudioListener.pause = true;
         isPaused = true;
@@ -52,6 +55,8 @@ public class PauseGame : MonoBehaviour
     public void Unpause()
     {
         pauseUI.SetActive(false);
+        bossHealth.SetActive(true);
+        bossName.SetActive(true);
         Time.timeScale = 1f;
         AudioListener.pause = false;
         isPaused = false;

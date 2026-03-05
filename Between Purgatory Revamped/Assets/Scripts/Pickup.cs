@@ -19,33 +19,35 @@ public class Pickup : MonoBehaviour
             {
                 if (playerHealth.health < 100)
                 {
-                    pickupSpawner.healthSpawnAmount++;
+                    
                     playerHealth.health += pickupType.health;
                     playerHealth.health = Mathf.Clamp(playerHealth.health, 0, 100);
                     playerHealth.UpdateHealth();
                     Destroy(gameObject);
+                    pickupSpawner.healthSpawnAmount++;
                 }
             }
             if (pickupType.isCannonAmmo == true)
             {
                 if (cannon.ammoCount < 4)
                 {
-                    pickupSpawner.cannonSpawnAmount++;
                     cannon.ammoCount += pickupType.ammo;
                     cannon.ammoCount = Mathf.Clamp(cannon.ammoCount, 0, 4);
                     cannon.UpdateCannonAmmo();
                     Destroy(gameObject);
+                    pickupSpawner.cannonSpawnAmount++;
                 }
             }
             if (pickupType.isOrbAmmo == true)
             {
                 if (orb.ammoCount < 35)
                 {
-                    pickupSpawner.orbSpawnAmount++;
+                    
                     orb.ammoCount += pickupType.ammo;
                     orb.ammoCount = Mathf.Clamp(orb.ammoCount, 0, 35);
                     orb.UpdateOrbAmmo();
                     Destroy(gameObject);
+                    pickupSpawner.orbSpawnAmount++;
                 }
             }
         }
