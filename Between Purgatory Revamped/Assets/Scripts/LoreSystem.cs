@@ -13,14 +13,14 @@ public class LoreSystem : MonoBehaviour
     private const string LorePageSix = "LorePage6";
     private const string LorePageSeven = "LorePage7";
     private const string LorePageEight = "LorePage8";
-    public bool HasPage1 = true;
-    public bool HasPage2 = true;
-    public bool HasPage3 = true;
-    public bool HasPage4 = true;
-    public bool HasPage5 = true;
-    public bool HasPage6 = true;
-    public bool HasPage7 = true;
-    public bool HasPage8 = true;
+    bool HasPage1 = true;
+    bool HasPage2 = true;
+    bool HasPage3 = true;
+    bool HasPage4 = true;
+    bool HasPage5 = true;
+    bool HasPage6 = true;
+    bool HasPage7 = true;
+    bool HasPage8 = true;
     // Start is called before the first frame update
     void Awake()
     {
@@ -33,19 +33,46 @@ public class LoreSystem : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void SavePage() 
+    public void SavePage1() 
     {
         PlayerPrefs.SetInt("LorePageOne", HasPage1 ? 1 : 0);
+        PlayerPrefs.Save();
+    }
+    public void SavePage2() 
+    {
         PlayerPrefs.SetInt("LorePageTwo", HasPage2 ? 1 : 0);
+        PlayerPrefs.Save();
+    }
+    public void SavePage3() 
+    {
         PlayerPrefs.SetInt("LorePageThree", HasPage3 ? 1 : 0);
+        PlayerPrefs.Save();
+    }
+    public void SavePage4() 
+    {
         PlayerPrefs.SetInt("LorePageFour", HasPage4 ? 1 : 0);
+        PlayerPrefs.Save();
+    }
+    public void SavePage5() 
+    {
         PlayerPrefs.SetInt("LorePageFive", HasPage5 ? 1 : 0);
+        PlayerPrefs.Save();
+    }
+    public void SavePage6() 
+    {
         PlayerPrefs.SetInt("LorePageSix", HasPage6 ? 1 : 0);
+        PlayerPrefs.Save();
+    }
+    public void SavePage7() 
+    {
         PlayerPrefs.SetInt("LorePageSeven", HasPage7 ? 1 : 0);
+        PlayerPrefs.Save();
+    }
+    public void SavePage8() 
+    {
         PlayerPrefs.SetInt("LorePageEight", HasPage8 ? 1 : 0);
         PlayerPrefs.Save();
     }
-
     public void Delete() 
     {
         PlayerPrefs.DeleteAll();

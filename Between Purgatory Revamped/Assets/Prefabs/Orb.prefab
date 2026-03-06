@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 4323557247861669222}
   - component: {fileID: 4323557247861669223}
   - component: {fileID: 3376365574259581860}
+  - component: {fileID: 3017307505515178518}
   m_Layer: 0
   m_Name: Orb
   m_TagString: Weapon
@@ -149,6 +150,27 @@ MonoBehaviour:
   ammoCount: 35
   ammoText: {fileID: 0}
   orbFiring: {fileID: 8300000, guid: 8718aee01026a044bb48aac5f96dc626, type: 3}
+--- !u!95 &3017307505515178518
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4323557247861669221}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 37fb5da33c1e5a04dbf674c2465197d5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &7460175426626037058
 PrefabInstance:
   m_ObjectHideFlags: 0

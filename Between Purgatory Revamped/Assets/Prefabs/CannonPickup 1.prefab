@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2707fd1f78ee8bf4aa95f563f5b64641, type: 2}
+  - {fileID: 2100000, guid: baa0a7a51a38f8541b9460342894bb7d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -109,5 +109,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupType: {fileID: 11400000, guid: c46a9a786a6c18c429f1d099c4f2faeb, type: 2}
-  cannon: {fileID: 737744759787532489, guid: ac9bfd54c7857f5419c0bc8a531dca60, type: 3}
-  orb: {fileID: 3376365574259581860, guid: 2f4199590505ea24b8a13b8b14d3b587, type: 3}
