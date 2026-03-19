@@ -30,6 +30,10 @@ public class Enemy : MonoBehaviour
     Animator animator;
 
     public int damageAmount = 7;
+
+    public AudioManager audioManager;
+
+    bool chase1Played, chase2Played, chase3Played;
     void Awake() 
     {
         player = GameObject.Find("Player").transform;
@@ -57,6 +61,7 @@ public class Enemy : MonoBehaviour
         }
         if (playerInSightRange) 
         {
+            
             if (enemyType.isBasic && playerInMeleeRange) 
             {
                 animator.SetBool("isChasing", false);
@@ -113,12 +118,38 @@ public class Enemy : MonoBehaviour
     {
         if (!playerBehindWall) 
         {
+            if (enemyType.isBasic && chase1Played == false) 
+            {
+                if (!audioManager.sfx[0].isPlaying)
+                {
+                    audioManager.PlaySFX(0);
+                }
+                chase1Played = true;
+            }
+            if (enemyType.isProjectile && chase2Played == false) 
+            {
+                if (!audioManager.sfx[1].isPlaying)
+                {
+                    audioManager.PlaySFX(1);
+                }
+                chase2Played = true;
+            }
+            if (enemyType.isTank && chase3Played == false)
+            {
+                if (!audioManager.sfx[2].isPlaying)
+                {
+                    audioManager.PlaySFX(2);
+                }
+                chase3Played = true;
+            }
+
             Vector3 lookAt = player.position;
 
             lookAt.y = transform.position.y;
 
             transform.LookAt(lookAt);
             agent.SetDestination(player.position);
+            
         }
     }
 

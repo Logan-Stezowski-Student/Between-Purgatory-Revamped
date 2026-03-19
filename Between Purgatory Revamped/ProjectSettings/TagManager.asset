@@ -13,6 +13,8 @@ TagManager:
   - Weapon
   - UI to be Destroyed
   - LoreSystem
+  - AudioManager
+  - EnemyProjectile
   layers:
   - Default
   - TransparentFX

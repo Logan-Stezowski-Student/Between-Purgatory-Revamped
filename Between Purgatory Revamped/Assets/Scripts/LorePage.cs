@@ -47,5 +47,13 @@ public class LorePage : MonoBehaviour
         {
             Lore6.interactable = true;
         }
+        if (PlayerPrefs.GetInt("LorePageSeven", 0) != 0)
+        {
+            Lore7.interactable = true;
+        }
+        if (PlayerPrefs.GetInt("LorePageEight", 0) != 0)
+        {
+            Lore8.interactable = true;
+        }
     }
 }

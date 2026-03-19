@@ -10,8 +10,6 @@ public class SettingsManager : MonoBehaviour
     public float masterVolume;
     public float musicVolume;
     public float sfxVolume;
-
-    public GameObject audioSource;
     // Start is called before the first frame update
     void Awake()
     {

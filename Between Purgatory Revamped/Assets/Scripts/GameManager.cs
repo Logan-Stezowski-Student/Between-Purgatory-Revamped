@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public GameManager instance;
+    public static GameManager instance;
 
     private void Awake()
     {
@@ -23,7 +23,12 @@ public class GameManager : MonoBehaviour
     public static void LoadScene(string sceneName) 
     {
         SceneManager.LoadScene(sceneName);
+        if (sceneName == "Title") 
+        {
+            Time.timeScale = 1.0f;
+        }
     }
+
     public static void Quit() 
     {
         Application.Quit();

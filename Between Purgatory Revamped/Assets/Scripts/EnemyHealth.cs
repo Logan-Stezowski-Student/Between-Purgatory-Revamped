@@ -10,10 +10,14 @@ public class EnemyHealth : MonoBehaviour
     public int health;
     Animator animator;
     NavMeshAgent agent;
+    AudioManager audioManager;
+    bool isDead1, isDead2, isDead3;
+
     void Start()
     {
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();   
+        audioManager = GetComponent<AudioManager>();
     }
 
     // Update is called once per frame

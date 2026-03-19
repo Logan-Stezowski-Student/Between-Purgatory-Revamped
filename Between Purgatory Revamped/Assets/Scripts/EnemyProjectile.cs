@@ -46,7 +46,8 @@ public class EnemyProjectile : MonoBehaviour
     }
     void OnCollisionEnter(Collision other)
     {
-       if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Wall")) 
+       if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Ground") 
+            || other.gameObject.CompareTag("Wall") || other.gameObject.CompareTag("Enemy")) 
        {
             Explode();
        }

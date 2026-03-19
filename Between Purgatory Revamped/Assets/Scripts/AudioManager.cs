@@ -4,35 +4,21 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager instance;
-
-    public SettingsManager settings;
-    public AudioSource music;
-    public AudioSource sfx;
+    //public SettingsManager settings;
+    public List<AudioSource> sfx = new List<AudioSource>();
+ 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        if (instance != null) 
-        {
-            Destroy(gameObject);
-            return;
-        }   
-        instance = this;
-        DontDestroyOnLoad(gameObject);
-        if (music == null) 
-        {
-            music = gameObject.AddComponent<AudioSource>();
-        }
-        if (sfx == null) 
-        {
-            sfx = gameObject.AddComponent<AudioSource>();
-        }
 
     }
 
     // Update is called once per frame
-    void Update()
+    public void PlaySFX(int index)
     {
-        
+        if (index >= 0 && index < sfx.Count)
+        {
+            sfx[index].Play();
+        }
     }
 }

@@ -10,6 +10,8 @@ public class BossAttack : MonoBehaviour
     public float timeBetweenAttacks;
 
     public BossHealth health;
+
+    public AudioManager audioManager;
     // Start is called before the first frame update
     void OnEnable()
     {
@@ -21,7 +23,7 @@ public class BossAttack : MonoBehaviour
         while (health.isAlive) 
         {
             int i = Random.Range(0, attack.Length);
-
+            audioManager.PlaySFX(13);
             attack[i].SetActive(true);
             yield return new WaitForSeconds(timeBetweenAttacks);
             attack[i].SetActive(false);

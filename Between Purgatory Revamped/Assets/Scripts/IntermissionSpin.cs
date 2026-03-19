@@ -10,6 +10,6 @@ public class IntermissionSpin : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+        transform.Rotate(Vector3.up, spinSpeed * Time.deltaTime);
     }
 }

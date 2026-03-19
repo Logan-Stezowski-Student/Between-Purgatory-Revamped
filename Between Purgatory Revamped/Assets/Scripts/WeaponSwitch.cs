@@ -49,6 +49,13 @@ public class WeaponSwitch : MonoBehaviour
             
         }
     }
+    public void AddWeapon(GameObject weapon, int i)
+    {
+        if (index >= 0 && index < weapons.Length)
+        {
+            weapons[i] = weapon;
+        }
+    }
     public void SwitchWeapon(int switchWeapon) 
     {
         if (switchWeapon != index && switchWeapon >= 0 && switchWeapon < weapons.Length) 
@@ -58,4 +65,6 @@ public class WeaponSwitch : MonoBehaviour
             weapons[index].SetActive(true);
         }
     }
+
+    
 }

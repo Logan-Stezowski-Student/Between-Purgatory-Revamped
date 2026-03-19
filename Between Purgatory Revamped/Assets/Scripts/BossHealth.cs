@@ -19,6 +19,7 @@ public class BossHealth : MonoBehaviour
     public GameObject enemySpawners;
     public GameObject healthSpawners;
     public GameObject ammoSpawners;
+    public AudioManager audioManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +63,7 @@ public class BossHealth : MonoBehaviour
             Destroy(text);
         }
         bossMusic.SetActive(false);
+        audioManager.PlaySFX(14);
         enemySpawners.SetActive(false);
         healthSpawners.SetActive(false);
         ammoSpawners.SetActive(false);
