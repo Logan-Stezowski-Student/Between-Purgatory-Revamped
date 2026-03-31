@@ -134,14 +134,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e12be71740c5fe4d844a5758c125d37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Lore1: {fileID: 0}
-  Lore2: {fileID: 0}
-  Lore3: {fileID: 0}
-  Lore4: {fileID: 0}
-  Lore5: {fileID: 0}
-  Lore6: {fileID: 0}
-  Lore7: {fileID: 0}
-  Lore8: {fileID: 0}
+  Lore1: {fileID: 6669938306802839183}
+  Lore2: {fileID: 6669938306735106588}
+  Lore3: {fileID: 6669938307372762806}
+  Lore4: {fileID: 6669938308498745464}
+  Lore5: {fileID: 6669938307448611344}
+  Lore6: {fileID: 6669938306932002264}
+  Lore7: {fileID: 6669938307800993828}
+  Lore8: {fileID: 6669938308404581498}
 --- !u!1 &5189931603167108190
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,6 +780,7 @@ GameObject:
   - component: {fileID: 6669938306735106587}
   - component: {fileID: 6669938306735106588}
   - component: {fileID: 7745014640407134184}
+  - component: {fileID: 4492829479993112487}
   m_Layer: 5
   m_Name: Lore2
   m_TagString: Untagged
@@ -835,8 +836,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 38a7207604ed20d44877ab51b446d509, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -864,7 +865,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
     m_HighlightedColor: {r: 0.6320754, g: 0.14609292, b: 0.14609292, a: 1}
@@ -874,10 +875,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: ab326ca417d746140a38188075c881f0, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 8f77588fb89d2ba4da44e3a434b362d6, type: 3}
     m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 21300000, guid: e417e06cdc33b324c8802920c6e46461, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -1005,6 +1006,23 @@ MonoBehaviour:
   Lore6: {fileID: 6669938306932002264}
   Lore7: {fileID: 6669938307800993828}
   Lore8: {fileID: 6669938308404581498}
+--- !u!114 &4492829479993112487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6669938306735106590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &6669938306802839169
 GameObject:
   m_ObjectHideFlags: 0
@@ -1018,6 +1036,7 @@ GameObject:
   - component: {fileID: 6669938306802839182}
   - component: {fileID: 6669938306802839183}
   - component: {fileID: 8423556000560129121}
+  - component: {fileID: 9188489260819554028}
   m_Layer: 5
   m_Name: Lore1
   m_TagString: Untagged
@@ -1073,8 +1092,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 38a7207604ed20d44877ab51b446d509, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1102,7 +1121,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
     m_HighlightedColor: {r: 0.6320754, g: 0.14609292, b: 0.14609292, a: 1}
@@ -1112,10 +1131,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: ab326ca417d746140a38188075c881f0, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 8f77588fb89d2ba4da44e3a434b362d6, type: 3}
     m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 21300000, guid: e417e06cdc33b324c8802920c6e46461, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -1243,6 +1262,35 @@ MonoBehaviour:
   Lore6: {fileID: 6669938306932002264}
   Lore7: {fileID: 6669938307800993828}
   Lore8: {fileID: 6669938308404581498}
+--- !u!114 &9188489260819554028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6669938306802839169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &6669938306880966812
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,6 +1379,7 @@ GameObject:
   - component: {fileID: 6669938306932002247}
   - component: {fileID: 6669938306932002264}
   - component: {fileID: 8063021354290955858}
+  - component: {fileID: 8617611421759490308}
   m_Layer: 5
   m_Name: Lore6
   m_TagString: Untagged
@@ -1386,8 +1435,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 38a7207604ed20d44877ab51b446d509, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1415,7 +1464,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
     m_HighlightedColor: {r: 0.6320754, g: 0.14609292, b: 0.14609292, a: 1}
@@ -1425,10 +1474,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: ab326ca417d746140a38188075c881f0, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 8f77588fb89d2ba4da44e3a434b362d6, type: 3}
     m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 21300000, guid: e417e06cdc33b324c8802920c6e46461, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -1556,6 +1605,35 @@ MonoBehaviour:
   Lore6: {fileID: 6669938306932002264}
   Lore7: {fileID: 6669938307800993828}
   Lore8: {fileID: 6669938308404581498}
+--- !u!114 &8617611421759490308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6669938306932002266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &6669938306975144695
 GameObject:
   m_ObjectHideFlags: 0
@@ -1902,6 +1980,7 @@ GameObject:
   - component: {fileID: 6669938307372762805}
   - component: {fileID: 6669938307372762806}
   - component: {fileID: 4236712431470054948}
+  - component: {fileID: 8695614657115923954}
   m_Layer: 5
   m_Name: Lore3
   m_TagString: Untagged
@@ -1957,8 +2036,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 38a7207604ed20d44877ab51b446d509, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1986,7 +2065,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
     m_HighlightedColor: {r: 0.6320754, g: 0.14609292, b: 0.14609292, a: 1}
@@ -1996,10 +2075,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: ab326ca417d746140a38188075c881f0, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 8f77588fb89d2ba4da44e3a434b362d6, type: 3}
     m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 21300000, guid: e417e06cdc33b324c8802920c6e46461, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -2127,6 +2206,23 @@ MonoBehaviour:
   Lore6: {fileID: 6669938306932002264}
   Lore7: {fileID: 6669938307800993828}
   Lore8: {fileID: 6669938308404581498}
+--- !u!114 &8695614657115923954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6669938307372762760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &6669938307388149991
 GameObject:
   m_ObjectHideFlags: 0
@@ -2294,6 +2390,7 @@ GameObject:
   - component: {fileID: 6669938307448611359}
   - component: {fileID: 6669938307448611344}
   - component: {fileID: 8856399077203147275}
+  - component: {fileID: 8216343727232701969}
   m_Layer: 5
   m_Name: Lore5
   m_TagString: Untagged
@@ -2349,8 +2446,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 38a7207604ed20d44877ab51b446d509, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2378,7 +2475,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
     m_HighlightedColor: {r: 0.6320754, g: 0.14609292, b: 0.14609292, a: 1}
@@ -2388,10 +2485,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: ab326ca417d746140a38188075c881f0, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 8f77588fb89d2ba4da44e3a434b362d6, type: 3}
     m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 21300000, guid: e417e06cdc33b324c8802920c6e46461, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -2519,6 +2616,23 @@ MonoBehaviour:
   Lore6: {fileID: 6669938306932002264}
   Lore7: {fileID: 6669938307800993828}
   Lore8: {fileID: 6669938308404581498}
+--- !u!114 &8216343727232701969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6669938307448611346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &6669938307460761698
 GameObject:
   m_ObjectHideFlags: 0
@@ -2838,6 +2952,7 @@ GameObject:
   - component: {fileID: 6669938307800993827}
   - component: {fileID: 6669938307800993828}
   - component: {fileID: 4618227738884581046}
+  - component: {fileID: 6241043751013349029}
   m_Layer: 5
   m_Name: Lore7
   m_TagString: Untagged
@@ -2893,8 +3008,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 38a7207604ed20d44877ab51b446d509, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2922,7 +3037,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
     m_HighlightedColor: {r: 0.6320754, g: 0.14609292, b: 0.14609292, a: 1}
@@ -2932,10 +3047,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: ab326ca417d746140a38188075c881f0, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 8f77588fb89d2ba4da44e3a434b362d6, type: 3}
     m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 21300000, guid: e417e06cdc33b324c8802920c6e46461, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -3063,6 +3178,35 @@ MonoBehaviour:
   Lore6: {fileID: 6669938306932002264}
   Lore7: {fileID: 6669938307800993828}
   Lore8: {fileID: 6669938308404581498}
+--- !u!114 &6241043751013349029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6669938307800993830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &6669938307839763531
 GameObject:
   m_ObjectHideFlags: 0
@@ -3792,6 +3936,7 @@ GameObject:
   - component: {fileID: 6669938308053997740}
   - component: {fileID: 6669938308053997741}
   - component: {fileID: 6669938308053997742}
+  - component: {fileID: 5849272484988404287}
   m_Layer: 5
   m_Name: Button (3)
   m_TagString: Untagged
@@ -3847,8 +3992,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 38a7207604ed20d44877ab51b446d509, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3876,7 +4021,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
     m_HighlightedColor: {r: 0.6320754, g: 0.14609292, b: 0.14609292, a: 1}
@@ -3886,10 +4031,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: ab326ca417d746140a38188075c881f0, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 8f77588fb89d2ba4da44e3a434b362d6, type: 3}
     m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 21300000, guid: e417e06cdc33b324c8802920c6e46461, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -3937,6 +4082,35 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5849272484988404287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6669938308053997728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySFX
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 15
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &6669938308071615517
 GameObject:
   m_ObjectHideFlags: 0
@@ -4425,6 +4599,7 @@ GameObject:
   - component: {fileID: 6669938308404581497}
   - component: {fileID: 6669938308404581498}
   - component: {fileID: 4736838881242937432}
+  - component: {fileID: 6247154618525590333}
   m_Layer: 5
   m_Name: Lore8
   m_TagString: Untagged
@@ -4480,8 +4655,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 38a7207604ed20d44877ab51b446d509, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4509,7 +4684,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
     m_HighlightedColor: {r: 0.6320754, g: 0.14609292, b: 0.14609292, a: 1}
@@ -4519,10 +4694,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: ab326ca417d746140a38188075c881f0, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 8f77588fb89d2ba4da44e3a434b362d6, type: 3}
     m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 21300000, guid: e417e06cdc33b324c8802920c6e46461, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -4650,6 +4825,35 @@ MonoBehaviour:
   Lore6: {fileID: 6669938306932002264}
   Lore7: {fileID: 6669938307800993828}
   Lore8: {fileID: 6669938308404581498}
+--- !u!114 &6247154618525590333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6669938308404581500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &6669938308436867667
 GameObject:
   m_ObjectHideFlags: 0
@@ -4751,6 +4955,7 @@ GameObject:
   - component: {fileID: 6669938308498745447}
   - component: {fileID: 6669938308498745464}
   - component: {fileID: 5624373761989737336}
+  - component: {fileID: 7412342998760973468}
   m_Layer: 5
   m_Name: Lore4
   m_TagString: Untagged
@@ -4806,8 +5011,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 38a7207604ed20d44877ab51b446d509, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4835,7 +5040,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
     m_HighlightedColor: {r: 0.6320754, g: 0.14609292, b: 0.14609292, a: 1}
@@ -4845,10 +5050,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: ab326ca417d746140a38188075c881f0, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 8f77588fb89d2ba4da44e3a434b362d6, type: 3}
     m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 21300000, guid: e417e06cdc33b324c8802920c6e46461, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -4976,6 +5181,23 @@ MonoBehaviour:
   Lore6: {fileID: 6669938306932002264}
   Lore7: {fileID: 6669938307800993828}
   Lore8: {fileID: 6669938308404581498}
+--- !u!114 &7412342998760973468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6669938308498745466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &6669938308499827499
 GameObject:
   m_ObjectHideFlags: 0

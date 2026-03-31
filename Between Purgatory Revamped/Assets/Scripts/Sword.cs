@@ -22,7 +22,11 @@ public class Sword : MonoBehaviour, IWeapon
     // Update is called once per frame
     public void FireWeapon()
     {
+        GameObject audioManager = GameObject.FindGameObjectWithTag("AudioManager");
+        AudioManager swordFiring = audioManager.GetComponent<AudioManager>();
         ammoText.text = Convert.ToString("Shots Left: Infinite");
+
+        swordFiring.PlaySFX(8);
         if (!isSwinging) 
         {
             isSwinging = true; 

@@ -21,7 +21,6 @@ public class Orb : MonoBehaviour, IWeapon
 
     public Text ammoText;
 
-    public AudioClip orbFiring;
     // Update is called once per frame
     // No more raycasting
 
@@ -44,7 +43,10 @@ public class Orb : MonoBehaviour, IWeapon
 
     void Fire()
     {
-        AudioSource.PlayClipAtPoint(orbFiring, transform.position);
+        GameObject audioManager = GameObject.FindGameObjectWithTag("AudioManager");
+        AudioManager orbFiring = audioManager.GetComponent<AudioManager>();
+
+        orbFiring.PlaySFX(10);
         if (ammoCount > 0)
         {
             canFire = true;

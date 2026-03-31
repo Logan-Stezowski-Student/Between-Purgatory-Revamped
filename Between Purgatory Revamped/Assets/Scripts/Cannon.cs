@@ -17,7 +17,6 @@ public class Cannon : MonoBehaviour, IWeapon
     private bool canFire = true;
 
     public Text ammoText;
-    public AudioClip cannonFiring;
     private void OnEnable()
     {
         nextFire = Time.time;
@@ -36,9 +35,11 @@ public class Cannon : MonoBehaviour, IWeapon
 
     void Fire() 
     {
-        AudioSource.PlayClipAtPoint(cannonFiring, transform.position);
+        GameObject audioManager = GameObject.FindGameObjectWithTag("AudioManager");
+        AudioManager cannonFiring = audioManager.GetComponent<AudioManager>();
         if (ammoCount > 0)
         {
+            cannonFiring.PlaySFX(12);
             canFire = true;
             GameObject proj = Instantiate(projectilePrefab, fireSocket.position, fireSocket.rotation);
             Projectile projScript = proj.GetComponent<Projectile>();

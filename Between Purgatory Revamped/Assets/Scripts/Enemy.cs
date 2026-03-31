@@ -31,8 +31,6 @@ public class Enemy : MonoBehaviour
 
     public int damageAmount = 7;
 
-    public AudioManager audioManager;
-
     bool chase1Played, chase2Played, chase3Played;
     void Awake() 
     {
@@ -116,29 +114,31 @@ public class Enemy : MonoBehaviour
 
     void ChasePlayer()
     {
+        GameObject audioManager = GameObject.FindGameObjectWithTag("AudioManager");
+        AudioManager enemySight = audioManager.GetComponent<AudioManager>();
         if (!playerBehindWall) 
         {
             if (enemyType.isBasic && chase1Played == false) 
             {
-                if (!audioManager.sfx[0].isPlaying)
+                if (!enemySight.sfx[0].isPlaying)
                 {
-                    audioManager.PlaySFX(0);
+                    enemySight.PlaySFX(0);
                 }
                 chase1Played = true;
             }
             if (enemyType.isProjectile && chase2Played == false) 
             {
-                if (!audioManager.sfx[1].isPlaying)
+                if (!enemySight.sfx[1].isPlaying)
                 {
-                    audioManager.PlaySFX(1);
+                    enemySight.PlaySFX(1);
                 }
                 chase2Played = true;
             }
             if (enemyType.isTank && chase3Played == false)
             {
-                if (!audioManager.sfx[2].isPlaying)
+                if (!enemySight.sfx[2].isPlaying)
                 {
-                    audioManager.PlaySFX(2);
+                    enemySight.PlaySFX(2);
                 }
                 chase3Played = true;
             }
