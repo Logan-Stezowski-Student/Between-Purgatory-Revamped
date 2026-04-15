@@ -15,6 +15,9 @@ TagManager:
   - LoreSystem
   - AudioManager
   - EnemyProjectile
+  - Music
+  - SFX
+  - SettingsManager
   layers:
   - Default
   - TransparentFX
