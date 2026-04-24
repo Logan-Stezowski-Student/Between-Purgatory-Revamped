@@ -55,7 +55,7 @@ public class Projectile : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Wall") ||
              other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Boss") ||
-             other.gameObject.CompareTag("EnemyProjectile"))
+             other.gameObject.CompareTag("EnemyProjectile") || other.gameObject.CompareTag("Eye"))
        {
             Explode();
        }

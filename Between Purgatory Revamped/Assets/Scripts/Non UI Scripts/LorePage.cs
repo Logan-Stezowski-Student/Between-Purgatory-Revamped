@@ -18,10 +18,15 @@ public class LorePage : MonoBehaviour
     void Start()
     {
         loreSystem = GameObject.FindGameObjectWithTag("LoreSystem");
+        LoadPages();
     }
 
     // Update is called once per frame
     void Update()
+    {
+
+    }
+    public void LoadPages() 
     {
         if (PlayerPrefs.GetInt("LorePageOne", 0) != 0)
         {

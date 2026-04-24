@@ -31,6 +31,7 @@ public class Sword : MonoBehaviour, IWeapon
         {
             isSwinging = true; 
             animator.SetBool("Activate", true);
+            animator.SetBool("isWalking", false);
         }
     }
 

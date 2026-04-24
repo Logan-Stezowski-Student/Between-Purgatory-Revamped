@@ -21,6 +21,10 @@ public class Player : MonoBehaviour
     private float groundDisableTime = 0.1f;
     private float groundDisableCount = 0;
     WeaponSwitch weaponSwitch;
+
+    Sword sword;
+    Orb orb;
+    Cannon cannon;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,7 +55,7 @@ public class Player : MonoBehaviour
         rigidBody.velocity = newVelocity;
     }
     public void Jump()
-    { 
+    {
         if (Input.GetKeyDown(KeyCode.Space) && jumpRelease)
         {
             if (isGrounded) 

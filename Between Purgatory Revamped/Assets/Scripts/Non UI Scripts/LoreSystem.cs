@@ -5,14 +5,14 @@ using UnityEngine;
 public class LoreSystem : MonoBehaviour
 {
     public static LoreSystem instance;
-    private const string LorePageOne = "LorePage1";
-    private const string LorePageTwo = "LorePage2";
-    private const string LorePageThree = "LorePage3";
-    private const string LorePageFour = "LorePage4";
-    private const string LorePageFive = "LorePage5";
-    private const string LorePageSix = "LorePage6";
-    private const string LorePageSeven = "LorePage7";
-    private const string LorePageEight = "LorePage8";
+    private const string LorePageOne = "LorePageOne";
+    private const string LorePageTwo = "LorePageTwo";
+    private const string LorePageThree = "LorePageThree";
+    private const string LorePageFour = "LorePageFour";
+    private const string LorePageFive = "LorePageFive";
+    private const string LorePageSix = "LorePageSix";
+    private const string LorePageSeven = "LorePageSeven";
+    private const string LorePageEight = "LorePageEight";
     bool HasPage1 = true;
     bool HasPage2 = true;
     bool HasPage3 = true;
@@ -21,17 +21,6 @@ public class LoreSystem : MonoBehaviour
     bool HasPage6 = true;
     bool HasPage7 = true;
     bool HasPage8 = true;
-    // Start is called before the first frame update
-    void Awake()
-    {
-        if (instance != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        instance = this;
-        DontDestroyOnLoad(gameObject);
-    }
 
     public void SavePage1() 
     {

@@ -15,11 +15,18 @@ public class BossHealth : MonoBehaviour
 
     public bool isAlive = true;
 
-    public GameObject bossMusic;
-    public GameObject enemySpawners;
-    public GameObject healthSpawners;
-    public GameObject ammoSpawners;
-    public AudioManager audioManager;
+    public GameObject redSun;
+
+    public GameObject attackindicator;
+
+    public GameObject bossDeco;
+
+    public GameObject explosion;
+
+    public GameObject redSunExplosion;
+    public GameObject redSunWave;
+
+    public UnityEvent OnBossDeath = new UnityEvent();
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +57,15 @@ public class BossHealth : MonoBehaviour
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         GameObject[] weapons = GameObject.FindGameObjectsWithTag("Weapon");
         GameObject[] ui = GameObject.FindGameObjectsWithTag("UI to be Destroyed");
+        GameObject[] eyes = GameObject.FindGameObjectsWithTag("Eye");
+        StartCoroutine(DeathAnim());
+        foreach (GameObject eyeball in eyes) 
+        {
+            Eyeball eye = eyeball.GetComponent<Eyeball>();
+            eye.RollEye();
+            Destroy(eyeball, 1.5f);
+        }
+        
         foreach (GameObject enemy in enemies) 
         {
             Destroy(enemy);
@@ -62,12 +78,18 @@ public class BossHealth : MonoBehaviour
         {
             Destroy(text);
         }
-        bossMusic.SetActive(false);
-        audioManager.PlaySFX(14);
-        enemySpawners.SetActive(false);
-        healthSpawners.SetActive(false);
-        ammoSpawners.SetActive(false);
-        Destroy(gameObject);
+        OnBossDeath.Invoke();
+        Destroy(attackindicator, 1.5f);
+        Destroy(gameObject, 1.5f);
+        Destroy(bossDeco, 1.5f);
+        Destroy(redSun, 1.5f);
+    }
+    IEnumerator DeathAnim() 
+    {
+        yield return new WaitForSeconds(1.49f);
+        explosion.SetActive(true);
+        redSunExplosion.SetActive(true);
+        redSunWave.SetActive(true);
     }
     public void UpdateBossHealth() 
     {

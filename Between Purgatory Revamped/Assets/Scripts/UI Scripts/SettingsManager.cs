@@ -17,18 +17,23 @@ public class SettingsManager : MonoBehaviour
     {
         musicVolume = PlayerPrefs.GetFloat("MusicLevel", 1.0f);
         musicSlider.SetValueWithoutNotify(musicVolume);
+        sfxVolume = PlayerPrefs.GetFloat("SFXLevel", 1.0f);
+        sfxSlider.SetValueWithoutNotify(sfxVolume);
         SetMusicVolume();
+        SetSFXVolume();
     }
     public void SetMusicVolume() 
     {
-        GameObject backgroundMusic = GameObject.FindGameObjectWithTag("Music");
-        AudioSource music = backgroundMusic.GetComponent<AudioSource>();
+        GameObject[] backgroundMusic = GameObject.FindGameObjectsWithTag("Music");
 
-        musicVolume = musicSlider.value;
-        music.volume = musicVolume;
-
-        PlayerPrefs.SetFloat(MusicLevel, music.volume);
-        PlayerPrefs.Save();
+        foreach (GameObject musicas in backgroundMusic) 
+        {
+            AudioSource music = musicas.GetComponent<AudioSource>();
+            musicVolume = musicSlider.value;
+            music.volume = musicVolume;
+            PlayerPrefs.SetFloat(MusicLevel, music.volume);
+            PlayerPrefs.Save();
+        }
     }
     public void SetSFXVolume()
     {

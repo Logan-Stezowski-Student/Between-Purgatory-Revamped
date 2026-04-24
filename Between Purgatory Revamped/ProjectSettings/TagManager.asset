@@ -18,6 +18,7 @@ TagManager:
   - Music
   - SFX
   - SettingsManager
+  - Eye
   layers:
   - Default
   - TransparentFX
@@ -29,8 +30,8 @@ TagManager:
   - whatIsPlayer
   - Enemy
   - whatIsWall
-  - 
-  - 
+  - Boss
+  - Deco
   - 
   - 
   - 
