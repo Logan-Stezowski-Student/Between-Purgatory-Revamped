@@ -21,12 +21,14 @@ public class Orb : MonoBehaviour, IWeapon
 
     public Text ammoText;
 
+    public Animator animator;
     // Update is called once per frame
     // No more raycasting
 
     private void OnEnable()
     {
         nextFire = Time.time;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -37,6 +39,8 @@ public class Orb : MonoBehaviour, IWeapon
             nextFire = Time.time + fireRate;
             Fire();
             UpdateOrbAmmo();
+            animator.SetBool("Shoot", true);
+            animator.SetBool("isWalking", false);
         }
     }
 

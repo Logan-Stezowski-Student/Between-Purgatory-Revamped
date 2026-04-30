@@ -17,9 +17,12 @@ public class Cannon : MonoBehaviour, IWeapon
     private bool canFire = true;
 
     public Text ammoText;
+
+    public Animator animator;
     private void OnEnable()
     {
         nextFire = Time.time;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -30,6 +33,8 @@ public class Cannon : MonoBehaviour, IWeapon
             nextFire = Time.time + fireRate;
             Fire();
             UpdateCannonAmmo();
+            animator.SetBool("Shoot", true);
+            animator.SetBool("isWalking", false);
         }
     }
 

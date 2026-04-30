@@ -22,13 +22,14 @@ public class Player : MonoBehaviour
     private float groundDisableCount = 0;
     WeaponSwitch weaponSwitch;
 
-    Sword sword;
-    Orb orb;
-    Cannon cannon;
+    InputHandler inputHandler;
+
+    public bool isMoving;
     // Start is called before the first frame update
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
+        inputHandler = GetComponent<InputHandler>();
     }
 
     // Update is called once per frame
@@ -90,6 +91,19 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground") && groundDisableCount <= 0) 
         { 
             isGrounded = true;
+            if (isMoving)
+            {
+                inputHandler.sword.animator.SetBool("isWalking", true);
+                inputHandler.orb.animator.SetBool("isWalking", true);
+                inputHandler.cannon.animator.SetBool("isWalking", true);
+            }
+            if (!isMoving) 
+            {
+                inputHandler.sword.animator.SetBool("isWalking", false);
+                inputHandler.orb.animator.SetBool("isWalking", false);
+                inputHandler.cannon.animator.SetBool("isWalking", false);
+            }
+            
         }
     }
     

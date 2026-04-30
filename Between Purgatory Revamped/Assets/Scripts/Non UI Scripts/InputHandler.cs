@@ -25,8 +25,19 @@ public class InputHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        {
+            player.isMoving = true;
+        }
+        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
+        {
+            player.isMoving = false;
+        }
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            sword.animator.SetBool("isWalking", false);
+            orb.animator.SetBool("isWalking", false);
+            cannon.animator.SetBool("isWalking", false);
             player.Jump();
         }
         if (Input.GetMouseButton(0))
@@ -42,6 +53,8 @@ public class InputHandler : MonoBehaviour
             {
                 sword.StopWeapon();
             }
+            orb.animator.SetBool("Shoot", false);
+            cannon.animator.SetBool("Shoot", false);
         }
         if (Input.GetKeyDown(KeyCode.Alpha1)) 
         {
