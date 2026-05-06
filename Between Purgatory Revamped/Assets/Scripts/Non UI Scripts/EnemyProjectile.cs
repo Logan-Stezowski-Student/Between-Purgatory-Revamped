@@ -31,7 +31,9 @@ public class EnemyProjectile : MonoBehaviour
     void Explode() 
     {
         Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-
+        GameObject projectileSFX = GameObject.FindGameObjectWithTag("AudioManager");
+        AudioManager audioManager = projectileSFX.GetComponent<AudioManager>();
+        audioManager.PlaySFX(21);
         Collider[] hits = Physics.OverlapSphere(transform.position, radius);
 
         foreach (Collider c in hits) 

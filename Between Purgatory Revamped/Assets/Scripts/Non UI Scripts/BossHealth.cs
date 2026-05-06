@@ -87,8 +87,11 @@ public class BossHealth : MonoBehaviour
     IEnumerator DeathAnim() 
     {
         yield return new WaitForSeconds(1.49f);
+        GameObject redSunExplosionSFX = GameObject.FindGameObjectWithTag("AudioManager");
+        AudioManager audioManager = redSunExplosionSFX.GetComponent<AudioManager>();
         explosion.SetActive(true);
         redSunExplosion.SetActive(true);
+        audioManager.PlaySFX(23);
         redSunWave.SetActive(true);
     }
     public void UpdateBossHealth() 

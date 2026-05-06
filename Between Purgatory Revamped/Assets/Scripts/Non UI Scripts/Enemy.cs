@@ -177,9 +177,12 @@ public class Enemy : MonoBehaviour
     {
         if (!alreadyAttacked)
         {
+            GameObject projectileSFX = GameObject.FindGameObjectWithTag("AudioManager");
+            AudioManager audioManager = projectileSFX.GetComponent<AudioManager>();
             PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
             if (playerHealth != null)
             {
+                audioManager.PlaySFX(22);
                 GameObject proj = Instantiate(projectilePrefab, fireSocket.position, fireSocket.rotation);
                 EnemyProjectile projScript = proj.GetComponent<EnemyProjectile>();
             }

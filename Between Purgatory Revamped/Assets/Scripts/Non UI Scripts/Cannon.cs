@@ -19,6 +19,7 @@ public class Cannon : MonoBehaviour, IWeapon
     public Text ammoText;
 
     public Animator animator;
+
     private void OnEnable()
     {
         nextFire = Time.time;

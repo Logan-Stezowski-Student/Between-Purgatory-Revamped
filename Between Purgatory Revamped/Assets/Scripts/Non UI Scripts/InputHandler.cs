@@ -35,10 +35,10 @@ public class InputHandler : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            player.Jump();
             sword.animator.SetBool("isWalking", false);
             orb.animator.SetBool("isWalking", false);
             cannon.animator.SetBool("isWalking", false);
-            player.Jump();
         }
         if (Input.GetMouseButton(0))
         {

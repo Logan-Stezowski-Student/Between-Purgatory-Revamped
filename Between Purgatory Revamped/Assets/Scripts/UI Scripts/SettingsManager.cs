@@ -47,4 +47,13 @@ public class SettingsManager : MonoBehaviour
             PlayerPrefs.Save();
         }
     }
+    public void DeathSFXVolume() 
+    {
+        GameObject[] soundEffects = GameObject.FindGameObjectsWithTag("SFX");
+        foreach (GameObject soundEffect in soundEffects)
+        {
+            AudioSource sfx = soundEffect.GetComponent<AudioSource>();
+            sfx.volume = 0f;
+        }
+    }
 }

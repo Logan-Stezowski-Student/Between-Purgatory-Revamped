@@ -22,6 +22,7 @@ public class Orb : MonoBehaviour, IWeapon
     public Text ammoText;
 
     public Animator animator;
+
     // Update is called once per frame
     // No more raycasting
 

@@ -10,7 +10,7 @@ public class Projectile : MonoBehaviour
     public GameObject explosionPrefab;
     public int damage;
     public float radius;
-
+    public string weaponType;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +33,22 @@ public class Projectile : MonoBehaviour
 
         Collider[] hits = Physics.OverlapSphere(transform.position, radius);
 
+        GameObject projectileSFX = GameObject.FindGameObjectWithTag("AudioManager");
+        AudioManager audioManager = projectileSFX.GetComponent<AudioManager>();
+
+        Debug.Log(projectileSFX);
+        
+
+        if (weaponType == "Orb") 
+        {
+            Debug.Log(weaponType);
+            audioManager.PlaySFX(20);
+        }
+        if (weaponType == "Cannon") 
+        {
+            Debug.Log(weaponType);
+            audioManager.PlaySFX(19);
+        }
         foreach (Collider c in hits) 
         {
             if (c.CompareTag("Enemy") || c.CompareTag("Boss"))

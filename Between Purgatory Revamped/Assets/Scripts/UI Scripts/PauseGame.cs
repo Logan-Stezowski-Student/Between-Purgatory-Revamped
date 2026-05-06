@@ -12,6 +12,7 @@ public class PauseGame : MonoBehaviour
     public InputHandler inputHandler;
     public GameObject bossHealth;
     public GameObject bossName;
+    public GameObject crossHair;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +45,7 @@ public class PauseGame : MonoBehaviour
         pauseUI.SetActive(true);
         bossHealth.SetActive(false);
         bossName.SetActive(false);
+        crossHair.SetActive(false);
         Time.timeScale = 0f;
         AudioListener.pause = true;
         isPaused = true;
@@ -57,6 +59,7 @@ public class PauseGame : MonoBehaviour
         pauseUI.SetActive(false);
         bossHealth.SetActive(true);
         bossName.SetActive(true);
+        crossHair.SetActive(true);
         Time.timeScale = 1f;
         AudioListener.pause = false;
         isPaused = false;
